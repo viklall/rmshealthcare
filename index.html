@@ -276,22 +276,11 @@ footer a:hover{color:#fff}
 .pillar p{font-size:.92rem;line-height:1.55}
 @media (max-width:768px){.approach-pillars{grid-template-columns:1fr}}
 
-/* Team Featured */
-.team-featured{margin:2.5rem 0 2rem}
-.featured-card{display:grid;grid-template-columns:280px 1fr;gap:32px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(14,46,78,.08);transition:transform .2s,box-shadow .2s}
-.featured-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(14,46,78,.12)}
-.featured-card img{width:100%;height:100%;object-fit:cover;object-position:top}
-.featured-body{padding:32px 32px 32px 0;display:flex;flex-direction:column;gap:10px}
-.featured-body h3{font-size:1.5rem;margin:0}
-.featured-body p{color:var(--body);font-size:.95rem;line-height:1.6;margin:4px 0 8px}
-.featured-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:8px}
-.featured-actions .mail{color:var(--blue);font-weight:600;text-decoration:none;font-size:.95rem}
-.featured-actions .mail:hover{text-decoration:underline}
 .staff-grid{grid-template-columns:repeat(5,1fr)!important}
 .staff-grid .member{transition:transform .2s}
 .staff-grid .member:hover{transform:translateY(-4px)}
 .staff-grid .member .book{display:none}
-@media (max-width:940px){.featured-card{grid-template-columns:1fr}.featured-card img{aspect-ratio:4/3;height:auto}.featured-body{padding:24px}.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media (max-width:940px){.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
 @media (max-width:600px){.staff-grid{grid-template-columns:repeat(2,1fr)!important}}
 
 /* Dark mode overrides */
@@ -455,21 +444,8 @@ footer a:hover{color:#fff}
 <section id="team">
   <div class="wrap">
     <div class="center">
-      <h2>Meet Our Team</h2>
-    </div>
-    <div class="team-featured">
-      <div class="featured-card">
-        <img src="images/team-dr-lall.jpg" alt="Dr. Ashok Lall, MD">
-        <div class="featured-body">
-          <span class="role r-blue">Founder & Internal Medicine Specialist</span>
-          <h3>Dr. Ashok Lall, MD</h3>
-          <p>25+ years of compassionate, evidence-based care for adults in Santa Clarita Valley. Chief Resident at Jewish Hospital, Cincinnati. Staff physician at Henry Mayo Newhall Memorial Hospital.</p>
-          <div class="featured-actions">
-            <a class="btn btn-solid" href="#contact">Book An Appointment</a>
-            <a class="mail" href="mailto:misscerydp@yahoo.com">&#9993; Email Dr. Lall</a>
-          </div>
-        </div>
-      </div>
+      <h2>Our Support Team</h2>
+      <p class="lead">The friendly faces behind your care experience.</p>
     </div>
     <div class="team-grid staff-grid">
       <div class="member"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4></div></div>
