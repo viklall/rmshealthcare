@@ -291,7 +291,7 @@ footer a:hover{color:#fff}
     <div class="header-actions">
       <a class="call-expert" href="tel:6612546600"><span class="ic">&#128222;</span><span><small>Call Expert</small><b>661-254-6600</b></span></a>
       <a class="btn btn-solid book-header" href="#contact">Book Appointment</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9789;</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
     </div>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
   </div>
@@ -624,13 +624,13 @@ footer a:hover{color:#fff}
 (function(){
   const toggle=document.getElementById("themeToggle");
   const saved=localStorage.getItem("rms-theme");
-  if(saved){document.documentElement.setAttribute("data-theme",saved);toggle.textContent=saved==="dark"?"&#9788;":"&#9789;"}
+  if(saved){document.documentElement.setAttribute("data-theme",saved);toggle.innerHTML=saved==="dark"?"&#9788;":"&#9789;"}
   toggle.addEventListener("click",()=>{
     const isDark=document.documentElement.getAttribute("data-theme")==="dark";
     const next=isDark?"light":"dark";
     document.documentElement.setAttribute("data-theme",next);
     localStorage.setItem("rms-theme",next);
-    toggle.textContent=next==="dark"?"&#9788;":"&#9789;";
+    toggle.innerHTML=next==="dark"?"&#9788;":"&#9789;";
   });
 })();
 // Programs accordion
