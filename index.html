@@ -134,10 +134,16 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .prog-row.hl{border:2px solid var(--blue)}
 
 /* Stats — light band, blue numbers */
-.stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:58px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.stat b{display:block;font-size:2.7rem;font-weight:800;color:var(--blue)}
-.stat span{font-size:.95rem}
+.stats{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 0}
+.stats-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:28px 20px;text-align:center;transition:transform .2s,box-shadow .2s}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(14,46,78,.1)}
+.stat-icon{font-size:2.4rem;margin-bottom:10px}
+.stat-card b{display:block;font-size:2.2rem;font-weight:800;color:var(--blue);margin-bottom:4px}
+.stat-card span{font-size:.9rem;color:var(--body)}
+[data-theme="dark"] .stat-card b{color:var(--blue-bright)}
+@media (max-width:768px){.stats-cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:400px){.stats-cards{grid-template-columns:1fr}}
 
 /* Approach */
 .approach{background:var(--bg-soft)}
@@ -486,11 +492,27 @@ footer a:hover{color:#fff}
 
 
 <div class="stats">
-  <div class="wrap stats-grid">
-    <div class="stat"><b>4500+</b><span>Patients Served</span></div>
-    <div class="stat"><b>25+</b><span>Years of Experience</span></div>
-    <div class="stat"><b>120+</b><span>5-Star Reviews</span></div>
-    <div class="stat"><b>5+</b><span>Dedicated Team Members</span></div>
+  <div class="wrap stats-cards">
+    <div class="stat-card">
+      <div class="stat-icon">&#128106;</div>
+      <b>4,500+</b>
+      <span>Patients Served</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">&#128197;</div>
+      <b>25+</b>
+      <span>Years of Experience</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">&#11088;</div>
+      <b>120+</b>
+      <span>5-Star Reviews</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">&#128101;</div>
+      <b>5+</b>
+      <span>Dedicated Team Members</span>
+    </div>
   </div>
 </div>
 
