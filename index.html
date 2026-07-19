@@ -252,6 +252,33 @@ footer a:hover{color:#fff}
 .prog-body ul li{padding:4px 0 4px 20px;position:relative;font-size:.9rem}
 .prog-body ul li::before{content:"✓";position:absolute;left:0;color:var(--blue-bright);font-weight:700}
 
+/* Approach Pillars */
+.approach-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:2.5rem;text-align:left}
+.pillar{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:28px;transition:transform .2s,box-shadow .2s}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(14,46,78,.1)}
+.pillar-icon{font-size:2.2rem;margin-bottom:12px}
+.pillar h4{color:var(--navy);font-size:1.1rem;margin-bottom:8px}
+.pillar p{font-size:.92rem;line-height:1.55}
+@media (max-width:768px){.approach-pillars{grid-template-columns:1fr}}
+
+/* Team Featured */
+.team-featured{margin:2.5rem 0 2rem}
+.featured-card{display:grid;grid-template-columns:280px 1fr;gap:32px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(14,46,78,.08);transition:transform .2s,box-shadow .2s}
+.featured-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(14,46,78,.12)}
+.featured-card img{width:100%;height:100%;object-fit:cover;object-position:top}
+.featured-body{padding:32px 32px 32px 0;display:flex;flex-direction:column;gap:10px}
+.featured-body h3{font-size:1.5rem;margin:0}
+.featured-body p{color:var(--body);font-size:.95rem;line-height:1.6;margin:4px 0 8px}
+.featured-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.featured-actions .mail{color:var(--blue);font-weight:600;text-decoration:none;font-size:.95rem}
+.featured-actions .mail:hover{text-decoration:underline}
+.staff-grid{grid-template-columns:repeat(5,1fr)!important}
+.staff-grid .member{transition:transform .2s}
+.staff-grid .member:hover{transform:translateY(-4px)}
+.staff-grid .member .book{display:none}
+@media (max-width:940px){.featured-card{grid-template-columns:1fr}.featured-card img{aspect-ratio:4/3;height:auto}.featured-body{padding:24px}.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media (max-width:600px){.staff-grid{grid-template-columns:repeat(2,1fr)!important}}
+
 /* Dark mode overrides */
 [data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4{color:var(--navy-deep)}
 [data-theme="dark"] .hero{background:linear-gradient(120deg,#081D33 0%,#0E2E4E 55%,#0A2540 100%)}
@@ -452,6 +479,24 @@ footer a:hover{color:#fff}
     <h2>Practicing Outstanding Communication in Every Visit</h2>
     <p class="lead">At RMS Healthcare, we believe that clear, respectful communication is the foundation of excellent medical care. Dr. Lall and his team make it a priority to listen carefully to each patient, answer questions thoroughly, and explain every diagnosis or treatment plan in simple, easy-to-understand terms.</p>
     <p class="lead">We understand that navigating healthcare can feel overwhelming, which is why we take extra time to ensure you feel heard and informed. Whether you're discussing test results, learning about a new medication, or exploring preventive options, our goal is for every patient to leave with confidence and peace of mind about their care.</p>
+    <div class="approach-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">&#128066;</div>
+        <h4>We Listen First</h4>
+        <p>Every visit starts with understanding your concerns, history, and goals — no rushing, no assumptions.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">&#128172;</div>
+        <h4>We Explain Clearly</h4>
+        <p>Complex medical terms are broken down into plain language so you fully understand your diagnosis and options.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">&#128200;</div>
+        <h4>We Follow Through</h4>
+        <p>From test results to treatment plans, we stay connected and ensure nothing falls through the cracks.</p>
+      </div>
+    </div>
+    <a class="btn btn-solid" href="#contact" style="margin-top:2rem">&#128197; Book Your First Visit</a>
   </div>
 </section>
 
@@ -461,13 +506,26 @@ footer a:hover{color:#fff}
       <h2>Meet Our Team</h2>
       <p class="lead">Our friendly and experienced team is here to support every step of your care journey.</p>
     </div>
-    <div class="team-grid">
-      <div class="member"><img src="images/team-dr-lall.jpg" alt="Dr. Ashok Lall, MD"><div class="mbody"><span class="role r-blue">Internal Medicine Specialist</span><h4>Dr. Ashok Lall, MD</h4><a class="mail" href="mailto:misscerydp@yahoo.com">&#9993; Send Email</a></div><a class="book" href="#contact">Book An Appointment</a></div>
-      <div class="member"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="mbody"><span class="role r-teal">Medical Administrator &amp; Biller</span><h4>Denise Pigors</h4><a class="mail" href="tel:+16616235014">&#127911; +1 (661) 623-5014</a><a class="mail" href="mailto:misscerydp@yahoo.com">&#9993; Send Email</a></div><a class="book" href="#contact">Book An Appointment</a></div>
-      <div class="member"><img src="images/team-sara.jpg" alt="Sara"><div class="mbody"><span class="role r-purple">Medical Receptionist &amp; Medical Assistant</span><h4>Sara</h4><a class="mail" href="mailto:misscerydp@yahoo.com">&#9993; Send Email</a></div><a class="book" href="#contact">Book An Appointment</a></div>
-      <div class="member"><img src="images/team-shirley.jpg" alt="Shirley"><div class="mbody"><span class="role r-amber">Assistant Manager</span><h4>Shirley</h4></div><a class="book" href="#contact">Book An Appointment</a></div>
-      <div class="member"><img src="images/team-vanessa.jpg" alt="Vanessa"><div class="mbody"><span class="role r-rose">Receptionist</span><h4>Vanessa</h4></div><a class="book" href="#contact">Book An Appointment</a></div>
-      <div class="member"><img src="images/team-greg.jpg" alt="Greg"><div class="mbody"><span class="role r-cyan">Ultrasound Specialist</span><h4>Greg</h4></div><a class="book" href="#contact">Book An Appointment</a></div>
+    <div class="team-featured">
+      <div class="featured-card">
+        <img src="images/team-dr-lall.jpg" alt="Dr. Ashok Lall, MD">
+        <div class="featured-body">
+          <span class="role r-blue">Founder & Internal Medicine Specialist</span>
+          <h3>Dr. Ashok Lall, MD</h3>
+          <p>25+ years of compassionate, evidence-based care for adults in Santa Clarita Valley. Chief Resident at Jewish Hospital, Cincinnati. Staff physician at Henry Mayo Newhall Memorial Hospital.</p>
+          <div class="featured-actions">
+            <a class="btn btn-solid" href="#contact">Book An Appointment</a>
+            <a class="mail" href="mailto:misscerydp@yahoo.com">&#9993; Email Dr. Lall</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-grid staff-grid">
+      <div class="member"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4></div></div>
+      <div class="member"><img src="images/team-sara.jpg" alt="Sara"><div class="mbody"><span class="role r-purple">Medical Assistant</span><h4>Sara</h4></div></div>
+      <div class="member"><img src="images/team-shirley.jpg" alt="Shirley"><div class="mbody"><span class="role r-amber">Assistant Manager</span><h4>Shirley</h4></div></div>
+      <div class="member"><img src="images/team-vanessa.jpg" alt="Vanessa"><div class="mbody"><span class="role r-rose">Receptionist</span><h4>Vanessa</h4></div></div>
+      <div class="member"><img src="images/team-greg.jpg" alt="Greg"><div class="mbody"><span class="role r-cyan">Ultrasound Specialist</span><h4>Greg</h4></div></div>
     </div>
   </div>
 </section>
