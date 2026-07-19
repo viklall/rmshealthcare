@@ -51,6 +51,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdro
 .nav-links a:hover{color:var(--blue)}
 .call-expert{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;line-height:1.25}
 .call-expert:hover{background:var(--blue)}
+.header-actions{display:flex;align-items:center;gap:12px}
+.book-header{padding:12px 22px;font-size:.92rem;white-space:nowrap}
+@media (max-width:940px){
+  .header-actions .call-expert small{display:none}
+  .book-header{padding:10px 16px;font-size:.85rem}
+}
+@media (max-width:600px){
+  .header-actions{gap:8px}
+  .book-header{display:none}
+}
 .call-expert .ic{font-size:1.3rem}
 .call-expert small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9FC1DC}
 .call-expert b{font-size:.98rem}
@@ -210,7 +220,10 @@ footer a:hover{color:#fff}
       <li><a href="#contact">Contact</a></li>
       <li><a href="Intake-form-download.pdf">Patient Intake Form</a></li>
     </ul>
-    <a class="call-expert" href="tel:6612546600"><span class="ic">&#128222;</span><span><small>Call Expert</small><b>661-254-6600</b></span></a>
+    <div class="header-actions">
+      <a class="call-expert" href="tel:6612546600"><span class="ic">&#128222;</span><span><small>Call Expert</small><b>661-254-6600</b></span></a>
+      <a class="btn btn-solid book-header" href="#contact">Book Appointment</a>
+    </div>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
   </div>
 </header>
