@@ -299,6 +299,27 @@ footer a:hover{color:#fff}
 [data-theme="dark"] .stats{background:var(--bg)}
 [data-theme="dark"] .insurance-box{background:var(--card-bg);border-left-color:var(--blue-bright)}
 [data-theme="dark"] .tcard{background:var(--card-bg)}
+
+/* FAQ Controls */
+.faq-controls{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}
+.faq-ctrl{background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 14px;font-size:.8rem;font-weight:600;color:var(--body);cursor:pointer;transition:.15s;font-family:var(--ff)}
+.faq-ctrl:hover{border-color:var(--blue);color:var(--blue)}
+[data-theme="dark"] .faq-ctrl{border-color:var(--card-border);color:var(--body)}
+[data-theme="dark"] .faq-ctrl:hover{border-color:var(--blue-bright);color:var(--blue-bright)}
+
+/* FAQ smooth animation */
+.faq details{transition:all .2s ease}
+.faq details[open] summary{border-radius:12px 12px 0 0}
+.faq details p{animation:faq-slide .25s ease}
+@keyframes faq-slide{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* Trust Bar (compact stats) */
+.trust-bar{display:flex;justify-content:center;gap:40px;margin:2rem 0 1.5rem;flex-wrap:wrap}
+.trust-stat{text-align:center}
+.trust-stat b{display:block;font-size:1.6rem;font-weight:800;color:var(--blue)}
+.trust-stat{font-size:.85rem;color:var(--body)}
+[data-theme="dark"] .trust-stat b{color:var(--blue-bright)}
+@media (max-width:600px){.trust-bar{gap:24px}.trust-stat b{font-size:1.3rem}}
 </style>
 </head>
 <body>
@@ -537,8 +558,12 @@ footer a:hover{color:#fff}
       <p class="eyebrow">Patient Information</p>
       <h2>Frequently Asked Questions</h2>
       <p>We want every patient to feel prepared and confident when visiting RMS Healthcare. Below are answers to some of the most common questions about our clinic and services.</p>
-    <div class="faq" style="margin-top:1.4rem">
-      <details open>
+    <div class="faq-controls" style="margin-top:1.4rem;text-align:right">
+      <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=true)">Expand All</button>
+      <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=false)">Collapse All</button>
+    </div>
+    <div class="faq" style="margin-top:0.8rem">
+      <details>
         <summary>What Should I Bring To My First Appointment?</summary>
         <p>Please bring your photo ID, insurance card, a list of current medications, and any recent test results or medical records you'd like Dr. Lall to review.</p>
       </details>
