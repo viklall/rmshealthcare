@@ -172,7 +172,7 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .member .book:hover{background:var(--blue)}
 
 /* FAQ — split, navy question bars */
-.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:flex-start}
+.faq-grid{max-width:800px;margin:0 auto}
 .faq details{margin-bottom:12px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
 .faq summary{cursor:pointer;font-weight:700;color:#fff;background:var(--navy);font-size:1rem;list-style:none;position:relative;padding:16px 46px 16px 20px}
 .faq summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.4rem;color:#8FC1E4;transition:transform .2s}
@@ -522,7 +522,6 @@ footer a:hover{color:#fff}
       <span class="who">Patient</span>
       <div class="dots" id="dots"></div>
     </div>
-    <p class="trustline">Trusted by hundreds of patients across Santa Clarita Valley for over 25 years.</p>
     <div class="insurance-box">
       <h3>Insurance Acceptance</h3>
       <p>We accept almost all PPO plans, Medicare and Medi-Cal. In addition, we are also providers for HealthCare Partners and many HMO plans. We recommend you check with your insurance carrier prior to making an appointment.</p>
