@@ -94,6 +94,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdro
 .svc-grid.four{grid-template-columns:repeat(4,1fr)}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 5px 16px rgba(14,46,78,.06);transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,46,78,.12)}
+
+/* Service Tabs */
+.svc-tabs{display:flex;justify-content:center;gap:10px;margin:2.5rem 0 1.5rem;flex-wrap:wrap}
+.svc-tab{background:#fff;border:2px solid var(--line);border-radius:10px;padding:12px 24px;font-family:var(--ff);font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;transition:.2s}
+.svc-tab:hover{border-color:var(--blue);color:var(--blue)}
+.svc-tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.svc-panel{display:none;animation:svc-fade .35s ease}
+.svc-panel.active{display:block}
+@keyframes svc-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .card img{aspect-ratio:16/10;object-fit:cover;width:100%}
 .card-body{padding:18px 18px 22px;text-align:center}
 .card-body h4{color:var(--blue);font-size:1rem;font-weight:700;margin-bottom:.45rem}
@@ -269,31 +278,40 @@ footer a:hover{color:#fff}
       <p class="lead">We provide a full range of diagnostic, preventive, and treatment services designed to keep patients healthy and address both urgent and long-term health concerns.</p>
     </div>
 
-    <h3 class="svc-group-title">Preventive &amp; Diagnostic Medicine</h3>
-    <div class="svc-grid four">
-      <div class="card"><img src="images/Health-screenings.jpg" alt="Health screenings"><div class="card-body"><h4>Health screenings (with Life Line Screening)</h4><p>Comprehensive tests to identify risks before they become major health problems.</p></div></div>
-      <div class="card"><img src="images/Echocardiograms-electrocardiograms.jpg" alt="Echocardiograms"><div class="card-body"><h4>Echocardiograms &amp; electrocardiograms</h4><p>Heart imaging and rhythm testing to monitor cardiovascular health.</p></div></div>
-      <div class="card"><img src="images/Remote-patient-monitoring-scaled.jpg" alt="Remote patient monitoring"><div class="card-body"><h4>Remote patient monitoring</h4><p>Track blood pressure, blood sugar, oxygen levels, heart rate, and weight from home for better ongoing care.</p></div></div>
-      <div class="card"><img src="images/Nutrition-dietary-counseling-22.jpg" alt="Nutrition counseling"><div class="card-body"><h4>Nutrition &amp; dietary counseling</h4><p>Personalized diet plans and education to support healthier choices and disease prevention.</p></div></div>
+    <div class="svc-tabs">
+      <button class="svc-tab active" data-tab="preventive">Preventive &amp; Diagnostic</button>
+      <button class="svc-tab" data-tab="internal">Internal Medicine</button>
+      <button class="svc-tab" data-tab="tele">Telemedicine</button>
     </div>
 
-    <h3 class="svc-group-title">Comprehensive Internal Medicine</h3>
-    <div class="svc-grid four">
-      <div class="card"><img src="images/Heart-circulatory-health.jpg" alt="Heart health"><div class="card-body"><h4>Heart &amp; circulatory health</h4><p>Ongoing care to prevent and manage heart disease and circulatory problems.</p></div></div>
-      <div class="card"><img src="images/Hypertension-diabetes-management.jpg" alt="Hypertension and diabetes"><div class="card-body"><h4>Hypertension &amp; diabetes management</h4><p>Regular monitoring and treatment plans to keep blood pressure and blood sugar under control.</p></div></div>
-      <div class="card"><img src="images/Respiratory-health-asthmaCOPD-care-scaled.jpg" alt="Respiratory care"><div class="card-body"><h4>Respiratory health &amp; asthma/COPD care</h4><p>Support and treatment for breathing conditions to improve daily life.</p></div></div>
-      <div class="card"><img src="images/Gastrointestinal-health.jpg" alt="Gastrointestinal health"><div class="card-body"><h4>Gastrointestinal health</h4><p>Diagnosis and treatment of digestive issues such as reflux, ulcers, and irritable bowel.</p></div></div>
-      <div class="card"><img src="images/Kidney-urinary-health.jpg" alt="Kidney and urinary health"><div class="card-body"><h4>Kidney &amp; urinary health</h4><p>Care for urinary tract problems and long-term kidney health.</p></div></div>
-      <div class="card"><img src="images/Mens-health-services.jpg" alt="Men's health"><div class="card-body"><h4>Men's health services</h4><p>Preventive and specialty care for men, including prostate and hormonal health.</p></div></div>
-      <div class="card"><img src="images/Musculoskeletal-conditions.jpg" alt="Musculoskeletal conditions"><div class="card-body"><h4>Musculoskeletal conditions</h4><p>Management of joint, bone, and muscle issues for pain relief and mobility.</p></div></div>
-      <div class="card"><img src="images/Chronic-pain-care.jpg" alt="Chronic pain care"><div class="card-body"><h4>Chronic pain care</h4><p>Customized approaches to help patients manage and reduce ongoing pain.</p></div></div>
+    <div class="svc-panel active" id="tab-preventive">
+      <div class="svc-grid four">
+        <div class="card"><img src="images/Health-screenings.jpg" alt="Health screenings"><div class="card-body"><h4>Health screenings (with Life Line Screening)</h4><p>Comprehensive tests to identify risks before they become major health problems.</p></div></div>
+        <div class="card"><img src="images/Echocardiograms-electrocardiograms.jpg" alt="Echocardiograms"><div class="card-body"><h4>Echocardiograms &amp; electrocardiograms</h4><p>Heart imaging and rhythm testing to monitor cardiovascular health.</p></div></div>
+        <div class="card"><img src="images/Remote-patient-monitoring-scaled.jpg" alt="Remote patient monitoring"><div class="card-body"><h4>Remote patient monitoring</h4><p>Track blood pressure, blood sugar, oxygen levels, heart rate, and weight from home for better ongoing care.</p></div></div>
+        <div class="card"><img src="images/Nutrition-dietary-counseling-22.jpg" alt="Nutrition counseling"><div class="card-body"><h4>Nutrition &amp; dietary counseling</h4><p>Personalized diet plans and education to support healthier choices and disease prevention.</p></div></div>
+      </div>
     </div>
 
-    <h3 class="svc-group-title">Telemedicine</h3>
-    <div class="svc-grid">
-      <div class="card"><img src="images/Virtual-visits-via-Zoom-or-telephone.jpg" alt="Virtual visits"><div class="card-body"><h4>Virtual visits via Zoom or telephone</h4><p>Speak directly with your provider without traveling to the office.</p></div></div>
-      <div class="card"><img src="images/Convenient-follow-ups-from-home.jpg" alt="Follow-ups from home"><div class="card-body"><h4>Convenient follow-ups from home</h4><p>Quick check-ins and updates to keep your care on track.</p></div></div>
-      <div class="card"><img src="images/Personalized-care-with-real-time-conversations.jpg" alt="Real-time conversations"><div class="card-body"><h4>Personalized care with real-time conversations</h4><p>Discuss your health concerns face-to-face online with the same level of attention as in person.</p></div></div>
+    <div class="svc-panel" id="tab-internal">
+      <div class="svc-grid four">
+        <div class="card"><img src="images/Heart-circulatory-health.jpg" alt="Heart health"><div class="card-body"><h4>Heart &amp; circulatory health</h4><p>Ongoing care to prevent and manage heart disease and circulatory problems.</p></div></div>
+        <div class="card"><img src="images/Hypertension-diabetes-management.jpg" alt="Hypertension and diabetes"><div class="card-body"><h4>Hypertension &amp; diabetes management</h4><p>Regular monitoring and treatment plans to keep blood pressure and blood sugar under control.</p></div></div>
+        <div class="card"><img src="images/Respiratory-health-asthmaCOPD-care-scaled.jpg" alt="Respiratory care"><div class="card-body"><h4>Respiratory health &amp; asthma/COPD care</h4><p>Support and treatment for breathing conditions to improve daily life.</p></div></div>
+        <div class="card"><img src="images/Gastrointestinal-health.jpg" alt="Gastrointestinal health"><div class="card-body"><h4>Gastrointestinal health</h4><p>Diagnosis and treatment of digestive issues such as reflux, ulcers, and irritable bowel.</p></div></div>
+        <div class="card"><img src="images/Kidney-urinary-health.jpg" alt="Kidney and urinary health"><div class="card-body"><h4>Kidney &amp; urinary health</h4><p>Care for urinary tract problems and long-term kidney health.</p></div></div>
+        <div class="card"><img src="images/Mens-health-services.jpg" alt="Men's health"><div class="card-body"><h4>Men's health services</h4><p>Preventive and specialty care for men, including prostate and hormonal health.</p></div></div>
+        <div class="card"><img src="images/Musculoskeletal-conditions.jpg" alt="Musculoskeletal conditions"><div class="card-body"><h4>Musculoskeletal conditions</h4><p>Management of joint, bone, and muscle issues for pain relief and mobility.</p></div></div>
+        <div class="card"><img src="images/Chronic-pain-care.jpg" alt="Chronic pain care"><div class="card-body"><h4>Chronic pain care</h4><p>Customized approaches to help patients manage and reduce ongoing pain.</p></div></div>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="tab-tele">
+      <div class="svc-grid">
+        <div class="card"><img src="images/Virtual-visits-via-Zoom-or-telephone.jpg" alt="Virtual visits"><div class="card-body"><h4>Virtual visits via Zoom or telephone</h4><p>Speak directly with your provider without traveling to the office.</p></div></div>
+        <div class="card"><img src="images/Convenient-follow-ups-from-home.jpg" alt="Follow-ups from home"><div class="card-body"><h4>Convenient follow-ups from home</h4><p>Quick check-ins and updates to keep your care on track.</p></div></div>
+        <div class="card"><img src="images/Personalized-care-with-real-time-conversations.jpg" alt="Real-time conversations"><div class="card-body"><h4>Personalized care with real-time conversations</h4><p>Discuss your health concerns face-to-face online with the same level of attention as in person.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -495,5 +513,6 @@ footer a:hover{color:#fff}
 </script>
 
 <script src="chat.js"></script>
+<script>document.querySelectorAll(".svc-tab").forEach(t=>{t.addEventListener("click",()=>{document.querySelectorAll(".svc-tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".svc-panel").forEach(x=>x.classList.remove("active"));t.classList.add("active");document.getElementById("tab-"+t.dataset.tab).classList.add("active")})});</script>
 </body>
 </html>
