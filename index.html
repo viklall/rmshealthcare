@@ -197,8 +197,9 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .contact .btn-solid:hover{background:#fff;color:var(--navy)}
 
 /* Footer */
-footer{background:var(--navy-deep);color:#AFC3D5;padding:60px 0 40px;font-size:.94rem}
-.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1.2fr;gap:40px;margin-bottom:36px}
+footer{background:var(--navy-deep);color:#AFC3D5;padding:0 0 40px;font-size:.94rem;position:relative}
+.footer-top-accent{height:4px;background:linear-gradient(90deg,var(--blue-bright),var(--blue),var(--navy-deep))}
+.foot-grid{display:grid;padding-top:56px;grid-template-columns:1.3fr 1fr 1.2fr 1.2fr;gap:40px;margin-bottom:36px}
 .foot-logo{height:56px;width:auto;margin-bottom:1rem}
 footer h5{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem;border-bottom:2px solid var(--blue-bright);display:inline-block;padding-bottom:6px}
 footer ul{list-style:none}
@@ -369,7 +370,7 @@ footer a:hover{color:#fff}
       <div class="badge"><img src="images/RMS-fav.png" alt="RMS badge"></div>
     </div>
     <div class="about-text">
-      <p class="eyebrow">RMS Healthcare Inc.</p>
+      <p class="eyebrow">About Us</p>
       <h2>Meet Dr. Ashok Lall</h2>
       <p>Dr. Ashok Lall is an internal medicine specialist with more than 25 years of experience caring for patients in Santa Clarita. He completed his residency at Saginaw Cooperative Hospitals in Michigan after training at the Jewish Hospital in Cincinnati, where he also served as Chief Resident.</p>
       <p>Since 1997, Dr. Lall has provided evidence-based, compassionate care for adults, helping patients stay healthy and manage chronic conditions. He is also a member of the medical staff at <strong>Henry Mayo Newhall Memorial Hospital</strong>.</p>
@@ -382,8 +383,8 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="center">
       <p class="eyebrow">Our Services</p>
-      <h2>Comprehensive Services for Every Patient</h2>
-      <p class="lead">We provide a full range of diagnostic, preventive, and treatment services designed to keep patients healthy and address both urgent and long-term health concerns.</p>
+      <h2>Comprehensive Care for Every Patient</h2>
+      <p class="lead">Diagnostic, preventive, and treatment services to keep you healthy at every stage of life.</p>
     </div>
 
     <div class="svc-tabs">
@@ -427,9 +428,9 @@ footer a:hover{color:#fff}
 <section id="programs">
   <div class="wrap-narrow prog-grid">
     <div>
-      <p class="eyebrow">Superior Care Programs</p>
-      <h2>Tailored Levels of Care for Every Patient</h2>
-      <p>Tailored levels of care designed to give every patient the attention, access, and support they need — from advanced preventive screenings to around-the-clock personalized medicine.</p>
+      <p class="eyebrow">Care Programs</p>
+      <h2>Superior Care Tiers</h2>
+      <p>Three levels of personalized attention, from preventive screenings to 24/7 care access and home visits.</p>
       <a class="btn btn-solid" href="tel:6612546600" style="margin-top:1.2rem">&#128222; Call to Enroll</a>
     </div>
     <div class="prog-accordion">
@@ -485,11 +486,13 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
+
+
 <div class="stats">
   <div class="wrap stats-grid">
     <div class="stat"><b>4500+</b><span>Patients Served</span></div>
     <div class="stat"><b>25+</b><span>Years of Experience</span></div>
-    <div class="stat"><b>120+</b><span>Positive Patient Reviews</span></div>
+    <div class="stat"><b>120+</b><span>5-Star Reviews</span></div>
     <div class="stat"><b>5+</b><span>Dedicated Team Members</span></div>
   </div>
 </div>
@@ -497,7 +500,7 @@ footer a:hover{color:#fff}
 <section class="approach">
   <div class="wrap center">
     <p class="eyebrow">Our Approach</p>
-    <h2>Practicing Outstanding Communication in Every Visit</h2>
+    <h2>Communication That Builds Trust</h2>
     <p class="lead">At RMS Healthcare, we believe that clear, respectful communication is the foundation of excellent medical care. Dr. Lall and his team make it a priority to listen carefully to each patient, answer questions thoroughly, and explain every diagnosis or treatment plan in simple, easy-to-understand terms.</p>
     <p class="lead">We understand that navigating healthcare can feel overwhelming, which is why we take extra time to ensure you feel heard and informed. Whether you're discussing test results, learning about a new medication, or exploring preventive options, our goal is for every patient to leave with confidence and peace of mind about their care.</p>
     <div class="approach-pillars">
@@ -524,8 +527,8 @@ footer a:hover{color:#fff}
 <section id="team">
   <div class="wrap">
     <div class="center">
-      <h2>Meet Our Team</h2>
-      <p class="lead">Our friendly and experienced team is here to support every step of your care journey.</p>
+      <p class="eyebrow">Our Team</p>
+      <h2>Meet the People Behind Your Care</h2>
     </div>
     <div class="team-featured">
       <div class="featured-card">
@@ -555,8 +558,8 @@ footer a:hover{color:#fff}
   <div class="wrap-narrow faq-grid">
     <div><img src="images/faq-doctor.jpg" alt="Doctor completing a patient form" style="border-radius:14px;box-shadow:0 16px 36px rgba(14,46,78,.16);width:100%;object-fit:cover"></div>
     <div>
-      <p class="eyebrow">Patient Information</p>
-      <h2>Frequently Asked Questions</h2>
+      <p class="eyebrow">FAQ</p>
+      <h2>Common Questions</h2>
       <p>We want every patient to feel prepared and confident when visiting RMS Healthcare. Below are answers to some of the most common questions about our clinic and services.</p>
     <div class="faq-controls" style="margin-top:1.4rem;text-align:right">
       <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=true)">Expand All</button>
@@ -627,6 +630,7 @@ footer a:hover{color:#fff}
 </section>
 
 <footer>
+  <div class="footer-top-accent"></div>
   <div class="wrap">
     <div class="foot-grid">
       <div>
