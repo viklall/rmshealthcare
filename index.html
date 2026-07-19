@@ -116,6 +116,14 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .svc-tab{background:var(--card-bg);border:2px solid var(--card-border);border-radius:10px;padding:10px 20px;font-family:var(--ff);font-size:.9rem;font-weight:700;color:var(--navy);cursor:pointer;transition:.2s}
 .svc-tab:hover{border-color:var(--blue);color:var(--blue)}
 .svc-tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* Inline stats below services tabs */
+.svc-stats{display:flex;justify-content:center;gap:32px;margin:1.5rem 0 2rem;flex-wrap:wrap}
+.svc-stat{text-align:center}
+.svc-stat b{display:block;font-size:1.6rem;font-weight:800;color:var(--blue);line-height:1}
+.svc-stat span{font-size:.78rem;color:var(--body);text-transform:uppercase;letter-spacing:.05em}
+[data-theme="dark"] .svc-stat b{color:var(--blue-bright)}
+@media (max-width:600px){.svc-stats{gap:20px}.svc-stat b{font-size:1.3rem}}
 .svc-panel{display:none;animation:svc-fade .35s ease}
 .svc-panel.active{display:block}
 @keyframes svc-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -397,6 +405,13 @@ footer a:hover{color:#fff}
       <button class="svc-tab" data-tab="tele">Telemedicine</button>
     </div>
 
+    <div class="svc-stats">
+      <div class="svc-stat"><b>4,500+</b><span>Patients Served</span></div>
+      <div class="svc-stat"><b>25+</b><span>Years Experience</span></div>
+      <div class="svc-stat"><b>120+</b><span>5-Star Reviews</span></div>
+      <div class="svc-stat"><b>5+</b><span>Team Members</span></div>
+    </div>
+
     <div class="svc-panel active" id="tab-preventive">
       <div class="svc-grid four">
         <div class="card"><img src="images/Health-screenings.jpg" alt="Health screenings"><div class="card-body"><h4>Health screenings (with Life Line Screening)</h4><p>Comprehensive tests to identify risks before they become major health problems.</p></div></div>
@@ -433,30 +448,7 @@ footer a:hover{color:#fff}
 
 
 
-<div class="stats">
-  <div class="wrap stats-cards">
-    <div class="stat-card">
-      <div class="stat-icon">&#128106;</div>
-      <b>4,500+</b>
-      <span>Patients Served</span>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">&#128197;</div>
-      <b>25+</b>
-      <span>Years of Experience</span>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">&#11088;</div>
-      <b>120+</b>
-      <span>5-Star Reviews</span>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">&#128101;</div>
-      <b>5+</b>
-      <span>Dedicated Team Members</span>
-    </div>
-  </div>
-</div>
+
 
 
 
