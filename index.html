@@ -181,7 +181,7 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 
 /* Testimonials — single rotating card */
 .quotes{background:var(--bg-soft)}
-.tcard{max-width:760px;margin:2rem auto;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:34px 38px;box-shadow:0 10px 26px rgba(14,46,78,.08);text-align:center}
+.tcard{margin:2rem 0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:34px 38px;box-shadow:0 10px 26px rgba(14,46,78,.08);text-align:center}
 .tcard img{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 auto 1rem}
 .tcard p{font-size:1.12rem;font-style:italic;color:var(--navy);margin-bottom:1rem}
 .tcard .stars{color:#F2B01E;letter-spacing:3px;margin-bottom:.7rem;font-size:1.05rem}
@@ -191,7 +191,7 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .dots button{width:10px;height:10px;border-radius:50%;border:0;background:#C7D8E6;cursor:pointer;padding:0}
 .dots button.on{background:var(--blue)}
 .trustline{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);text-align:center;margin-top:2rem}
-.insurance-box{max-width:760px;margin:2.6rem auto 0;background:#fff;border-left:5px solid var(--blue);border-radius:0 14px 14px 0;padding:26px 30px;box-shadow:0 6px 18px rgba(14,46,78,.08)}
+.insurance-box{margin:2.6rem 0 0;background:#fff;border-left:5px solid var(--blue);border-radius:0 14px 14px 0;padding:26px 30px;box-shadow:0 6px 18px rgba(14,46,78,.08)}
 .insurance-box h3{font-size:1.15rem;margin-bottom:.5rem}
 
 /* Contact — navy section, form on dark */
@@ -324,6 +324,11 @@ footer a:hover{color:#fff}
 .trust-stat{font-size:.85rem;color:var(--body)}
 [data-theme="dark"] .trust-stat b{color:var(--blue-bright)}
 @media (max-width:600px){.trust-bar{gap:24px}.trust-stat b{font-size:1.3rem}}
+
+/* Two-column FAQ + Testimonials layout */
+.faq-testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.faq-col,.testi-col{min-width:0}
+@media(max-width:900px){.faq-testi-grid{grid-template-columns:1fr;gap:36px}}
 </style>
 </head>
 <body>
@@ -455,54 +460,48 @@ footer a:hover{color:#fff}
 
 
 <section style="padding-top:0">
-  <div class="wrap-narrow faq-grid">
-    <div><img src="images/faq-doctor.jpg" alt="Doctor completing a patient form" style="border-radius:14px;box-shadow:0 16px 36px rgba(14,46,78,.16);width:100%;max-height:320px;object-fit:cover"></div>
-    <div>
+  <div class="wrap faq-testi-grid">
+    <div class="faq-col">
       <h2>Frequently Asked Questions</h2>
       <p>We want every patient to feel prepared and confident when visiting RMS Healthcare. Below are answers to some of the most common questions about our clinic and services.</p>
-    <div class="faq-controls" style="margin-top:1.4rem;text-align:right">
-      <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=true)">Expand All</button>
-      <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=false)">Collapse All</button>
+      <div class="faq-controls" style="margin-top:1.4rem;text-align:right">
+        <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=true)">Expand All</button>
+        <button class="faq-ctrl" onclick="document.querySelectorAll('.faq details').forEach(d=>d.open=false)">Collapse All</button>
+      </div>
+      <div class="faq" style="margin-top:0.8rem">
+        <details>
+          <summary>What Should I Bring To My First Appointment?</summary>
+          <p>Please bring your photo ID, insurance card, a list of current medications, and any recent test results or medical records you'd like Dr. Lall to review.</p>
+        </details>
+        <details>
+          <summary>Do You Accept My Insurance?</summary>
+          <p>We accept almost all PPO plans, Medicare and Medi-Cal. In addition, we are also providers for HealthCare Partners and many HMO plans. We recommend you check with your insurance carrier prior to making an appointment.</p>
+        </details>
+        <details>
+          <summary>Can I Book A Virtual Appointment?</summary>
+          <p>Yes — we offer telemedicine visits via Zoom or telephone for follow-ups, prescription refills, and consultations that don't require an in-person exam.</p>
+        </details>
+      </div>
     </div>
-    <div class="faq" style="margin-top:0.8rem">
-      <details>
-        <summary>What Should I Bring To My First Appointment?</summary>
-        <p>Please bring your photo ID, insurance card, a list of current medications, and any recent test results or medical records you'd like Dr. Lall to review.</p>
-      </details>
-      <details>
-        <summary>Do You Accept My Insurance?</summary>
+    <div class="testi-col">
+      <div class="center">
+        <h2>What Our Patients Say</h2>
+      </div>
+      <div class="tcard" id="tcard">
+        <img id="t-img" src="images/patient_3.jpg" alt="">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p id="t-text">"He is fabulous — honest, friendly, and takes his time with patients. He listens and is always available. We love the staff!"</p>
+        <cite id="t-name">Rose N.</cite>
+        <span class="who">Patient</span>
+        <div class="dots" id="dots"></div>
+      </div>
+      <div class="insurance-box">
+        <h3>Insurance Acceptance</h3>
         <p>We accept almost all PPO plans, Medicare and Medi-Cal. In addition, we are also providers for HealthCare Partners and many HMO plans. We recommend you check with your insurance carrier prior to making an appointment.</p>
-      </details>
-      <details>
-        <summary>Can I Book A Virtual Appointment?</summary>
-        <p>Yes — we offer telemedicine visits via Zoom or telephone for follow-ups, prescription refills, and consultations that don't require an in-person exam.</p>
-      </details>
-    </div>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="quotes" id="testimonials">
-  <div class="wrap">
-    <div class="center">
-      <h2>What Our Patients Say</h2>
-    </div>
-    <div class="tcard" id="tcard">
-      <img id="t-img" src="images/patient_3.jpg" alt="">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p id="t-text">"He is fabulous — honest, friendly, and takes his time with patients. He listens and is always available. We love the staff!"</p>
-      <cite id="t-name">Rose N.</cite>
-      <span class="who">Patient</span>
-      <div class="dots" id="dots"></div>
-    </div>
-    <div class="insurance-box">
-      <h3>Insurance Acceptance</h3>
-      <p>We accept almost all PPO plans, Medicare and Medi-Cal. In addition, we are also providers for HealthCare Partners and many HMO plans. We recommend you check with your insurance carrier prior to making an appointment.</p>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
+</section><section class="contact" id="contact">
   <div class="wrap">
     <h2>Contact Us</h2>
     <div class="phone-ic">&#9742;</div>
