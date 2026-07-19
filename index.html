@@ -333,9 +333,14 @@ footer a:hover{color:#fff}
 /* Services + Insurance 2-column layout */
 .svc-ins-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
 .svc-main{min-width:0}
-.svc-ins-col{position:sticky;top:100px}
+.svc-ins-col{position:sticky;top:100px;padding-top:2.5rem}
 .svc-ins-col .insurance-box{margin-top:0}
-@media(max-width:1000px){.svc-ins-grid{grid-template-columns:1fr}.svc-ins-col{position:static;margin-top:2rem}}
+.insurance-box .ins-list{list-style:none;margin:.9rem 0 1rem;padding:0}
+.insurance-box .ins-list li{position:relative;padding:6px 0 6px 28px;font-size:.95rem}
+.insurance-box .ins-list li::before{content:"\2713";position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;background:var(--blue);color:#fff;font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.insurance-box .ins-note{font-size:.85rem;color:var(--muted,#5a6b7b);margin-bottom:1.1rem}
+.insurance-box .btn{padding:11px 20px;font-size:.92rem;width:100%;text-align:center}
+@media(max-width:1000px){.svc-ins-grid{grid-template-columns:1fr}.svc-ins-col{position:static;margin-top:0;padding-top:0}}
 </style>
 </head>
 <body>
@@ -454,7 +459,15 @@ footer a:hover{color:#fff}
       <div class="svc-ins-col">
         <div class="insurance-box">
           <h3>Insurance Acceptance</h3>
-          <p>We accept almost all PPO plans, Medicare and Medi-Cal. In addition, we are also providers for HealthCare Partners and many HMO plans. We recommend you check with your insurance carrier prior to making an appointment.</p>
+          <ul class="ins-list">
+            <li>Almost all PPO plans</li>
+            <li>Medicare</li>
+            <li>Medi-Cal</li>
+            <li>HealthCare Partners</li>
+            <li>Many HMO plans</li>
+          </ul>
+          <p class="ins-note">We recommend you check with your insurance carrier prior to making an appointment.</p>
+          <a class="btn btn-solid" href="tel:6612546600">Call to Verify Coverage</a>
         </div>
       </div>
     </div>
