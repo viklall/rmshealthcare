@@ -181,7 +181,7 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 
 /* Testimonials — single rotating card */
 .quotes{background:var(--bg-soft)}
-.tcard{margin:2rem 0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:34px 38px;box-shadow:0 10px 26px rgba(14,46,78,.08);text-align:center}
+.tcard{margin:2rem 0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:34px 38px;box-shadow:0 10px 26px rgba(14,46,78,.08);text-align:center;transition:opacity .5s ease}
 .tcard img{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 auto 1rem}
 .tcard p{font-size:1.12rem;font-style:italic;color:var(--navy);margin-bottom:1rem}
 .tcard .stars{color:#F2B01E;letter-spacing:3px;margin-bottom:.7rem;font-size:1.05rem}
@@ -341,12 +341,39 @@ footer a:hover{color:#fff}
 .insurance-box .ins-note{font-size:.85rem;color:var(--muted,#5a6b7b);margin-bottom:1.1rem}
 .insurance-box .btn{padding:11px 20px;font-size:.92rem;width:100%;text-align:center}
 @media(max-width:1000px){.svc-ins-grid{grid-template-columns:1fr}.svc-ins-col{position:static;margin-top:0;padding-top:0}}
+
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 32px rgba(14,46,78,.14)}
+.member-img-wrap{position:relative;overflow:hidden;border-radius:14px 14px 0 0}
+.member-img-wrap img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .4s}
+.member-overlay{position:absolute;inset:0;background:rgba(14,46,78,.82);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;opacity:0;transition:opacity .35s}
+.member-overlay span{font-weight:700;font-size:1.1rem;margin-bottom:8px}
+.member-overlay p{font-size:.9rem;line-height:1.5;opacity:.92}
+.member:hover .member-overlay{opacity:1}
+.member:hover .member-img-wrap img{transform:scale(1.06)}
+
+/* Sticky header */
+.sticky-header{position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);background:rgba(255,255,255,.92);box-shadow:0 2px 20px rgba(14,46,78,.08);transition:box-shadow .3s}
+[data-theme="dark"] .sticky-header{background:rgba(10,26,42,.92)}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Hero parallax */
+.hero{position:relative;overflow:hidden}
+.hero-parallax{position:absolute;inset:0;background:url(images/hero-bg.jpg) center/cover no-repeat;opacity:.12;transform:translateZ(0);will-change:transform}
+.hero .wrap{position:relative;z-index:2}
+
+/* Contact grid */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch;margin-top:2rem}
+.contact-map iframe{width:100%;height:100%;border:0;border-radius:14px;min-height:380px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.contact-map{min-height:280px}}
 </style>
 </head>
 <body>
 
 
-<header>
+<header class="sticky-header">
   <div class="wrap nav">
     <a class="brand" href="#top"><img src="images/RMS-logo.png" alt="RMS Healthcare Inc."></a>
     <ul class="nav-links" id="navLinks">
@@ -366,7 +393,7 @@ footer a:hover{color:#fff}
   </div>
 </header>
 
-<section class="hero" id="top">
+<section class="hero" id="top"><div class="hero-parallax"></div>
   <div class="wrap">
     <p class="eyebrow">&#9679; Dr. Ashok Lall, MD — Internal Medicine Specialist</p>
     <h1>RMS Healthcare Inc.</h1>
@@ -379,7 +406,7 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="reveal">
   <div class="wrap-narrow about-grid">
     <div class="about-portrait">
       <img src="images/team-dr-lall.jpg" alt="Dr. Ashok Lall, MD">
@@ -393,23 +420,23 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<section id="team">
+<section id="team" class="reveal">
   <div class="wrap">
     <div class="center">
       <h2>Our Support Team</h2>
       <p class="lead">The friendly faces behind your care experience.</p>
     </div>
     <div class="team-grid staff-grid">
-      <div class="member"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4></div></div>
-      <div class="member"><img src="images/team-sara.jpg" alt="Sara"><div class="mbody"><span class="role r-purple">Medical Assistant</span><h4>Sara</h4></div></div>
-      <div class="member"><img src="images/team-shirley.jpg" alt="Shirley"><div class="mbody"><span class="role r-amber">Assistant Manager</span><h4>Shirley</h4></div></div>
-      <div class="member"><img src="images/team-vanessa.jpg" alt="Vanessa"><div class="mbody"><span class="role r-rose">Receptionist</span><h4>Vanessa</h4></div></div>
-      <div class="member"><img src="images/team-greg.jpg" alt="Greg"><div class="mbody"><span class="role r-cyan">Ultrasound Specialist</span><h4>Greg</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="member-overlay"><span>Medical Administrator</span><p>Coordinating patient care and office operations with precision and warmth.</p></div></div><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-sara.jpg" alt="Sara"><div class="member-overlay"><span>Medical Assistant</span><p>Assisting with clinical procedures and ensuring patient comfort.</p></div></div><div class="mbody"><span class="role r-purple">Medical Assistant</span><h4>Sara</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-shirley.jpg" alt="Shirley"><div class="member-overlay"><span>Assistant Manager</span><p>Overseeing daily operations and staff coordination.</p></div></div><div class="mbody"><span class="role r-amber">Assistant Manager</span><h4>Shirley</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-vanessa.jpg" alt="Vanessa"><div class="member-overlay"><span>Receptionist</span><p>Welcoming patients and managing appointments with a smile.</p></div></div><div class="mbody"><span class="role r-rose">Receptionist</span><h4>Vanessa</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-greg.jpg" alt="Greg"><div class="member-overlay"><span>Ultrasound Specialist</span><p>Performing diagnostic imaging with expertise and care.</p></div></div><div class="mbody"><span class="role r-cyan">Ultrasound Specialist</span><h4>Greg</h4></div></div>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
+<section class="services reveal" id="services">
   <div class="wrap">
     <div class="center">
       <h2>Our Services</h2>
@@ -484,7 +511,7 @@ footer a:hover{color:#fff}
 
 
 
-<section style="padding-top:0">
+<section style="padding-top:0" class="reveal">
   <div class="wrap faq-testi-grid">
     <div class="faq-col">
       <h2>Frequently Asked Questions</h2>
@@ -522,14 +549,14 @@ footer a:hover{color:#fff}
       </div>
     </div>
   </div>
-</section><section class="contact" id="contact">
+</section><section class="contact reveal"> id="contact">
   <div class="wrap">
     <h2>Contact Us</h2>
     <div class="phone-ic">&#9742;</div>
     <a class="big-phone" href="tel:6612546600">+1 (661) 254-6600</a>
     <p class="lead">Reach out to our team for appointments, insurance questions, or general inquiries.</p>
 
-    <form action="https://formsubmit.co/misscerydp@yahoo.com" method="POST">
+    <div class="contact-grid"><div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.2158!2d-118.5089!3d34.3916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c287a5c0e15d0d%3A0x1234567890abcdef!2sRMS%20Healthcare%20Inc!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;border-radius:14px;min-height:380px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="contact-form"><form action="https://formsubmit.co/misscerydp@yahoo.com" method="POST">
       <input type="hidden" name="_subject" value="New message from rmshealthcareinc.com">
       <input type="hidden" name="_captcha" value="true">
       <input type="text" name="_honey" style="display:none">
@@ -544,7 +571,7 @@ footer a:hover{color:#fff}
       <button class="btn btn-solid" type="submit">Submit Form</button>
       <p class="form-note">Please do not send sensitive medical information via regular email. For emergencies, call 911.</p>
     </form>
-  </div>
+  </div></div></div>
 </section>
 
 <footer>
@@ -649,6 +676,21 @@ footer a:hover{color:#fff}
     });
   });
 })();
+
+// Scroll reveal observer
+(function(){
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+})();
+// Hero parallax
+window.addEventListener('scroll',function(){
+  const hero=document.querySelector('.hero-parallax');
+  if(hero){hero.style.transform='translateY('+window.scrollY*0.35+'px)';}
+});
 </script>
 </body>
 </html>
