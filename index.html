@@ -439,6 +439,29 @@ footer a:hover{color:#fff}
 }
 
   </style>
+<style>
+.btn-email{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:10px;
+  padding:8px 16px;
+  background:transparent;
+  color:var(--blue);
+  border:1.5px solid var(--line);
+  border-radius:8px;
+  font-size:.85rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .2s;
+  font-family:inherit
+}
+.btn-email:hover{
+  background:var(--bg-soft);
+  border-color:var(--blue);
+  color:var(--navy)
+}
+</style>
 </head>
 <body>
 
@@ -505,9 +528,9 @@ footer a:hover{color:#fff}
       <p class="lead">The friendly faces behind your care experience.</p>
     </div>
     <div class="team-grid staff-grid">
-      <div class="member"><div class="member-img-wrap"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="member-overlay"><span>Medical Administrator</span><p>Coordinating patient care and office operations with precision and warmth.</p></div></div><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4></div></div>
-      <div class="member"><div class="member-img-wrap"><img src="images/team-sara.jpg" alt="Sara"><div class="member-overlay"><span>Medical Assistant and Receptionist</span><p>Assisting with clinical procedures, patient comfort, and front-desk operations.</p></div></div><div class="mbody"><span class="role r-purple">Medical Assistant and Receptionist</span><h4>Sara</h4></div></div>
-      <div class="member"><div class="member-img-wrap" style="background:var(--bg-soft);display:flex;align-items:center;justify-content:center;min-height:260px"><div style="text-align:center;color:var(--muted)"><span style="font-size:3rem">👤</span><p style="margin-top:8px;font-size:.85rem">Photo coming soon</p></div></div><div class="mbody"><span class="role r-teal">Medical Assistant</span><h4>Jessica</h4></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-denise.jpg" alt="Denise Pigors"><div class="member-overlay"><span>Medical Administrator</span><p>Coordinating patient care and office operations with precision and warmth.</p></div></div><div class="mbody"><span class="role r-teal">Medical Administrator</span><h4>Denise Pigors</h4><button class="btn-email" onclick="openEmailModal('Denise Pigors','misscerydp@yahoo.com')">✉️ Email Denise</button></div></div>
+      <div class="member"><div class="member-img-wrap"><img src="images/team-sara.jpg" alt="Sara"><div class="member-overlay"><span>Medical Assistant and Receptionist</span><p>Assisting with clinical procedures, patient comfort, and front-desk operations.</p></div></div><div class="mbody"><span class="role r-purple">Medical Assistant and Receptionist</span><h4>Sara</h4><button class="btn-email" onclick="openEmailModal('Sara','rmshealthcare201@yahoo.com')">✉️ Email Sara</button></div></div>
+      <div class="member"><div class="member-img-wrap" style="background:var(--bg-soft);display:flex;align-items:center;justify-content:center;min-height:260px"><div style="text-align:center;color:var(--muted)"><span style="font-size:3rem">👤</span><p style="margin-top:8px;font-size:.85rem">Photo coming soon</p></div></div><div class="mbody"><span class="role r-teal">Medical Assistant</span><h4>Jessica</h4><button class="btn-email" onclick="openEmailModal('Jessica','javierj37@yahoo.com')">✉️ Email Jessica</button></div></div>
       <div class="member"><div class="member-img-wrap"><img src="images/team-shirley.jpg" alt="Shirley"><div class="member-overlay"><span>Referral Coordinator</span><p>Managing specialist referrals and care coordination.</p></div></div><div class="mbody"><span class="role r-amber">Referral Coordinator</span><h4>Shirley</h4></div></div>
       
       <div class="member"><div class="member-img-wrap"><img src="images/team-greg.jpg" alt="Greg"><div class="member-overlay"><span>Ultrasound Specialist</span><p>Performing diagnostic imaging with expertise and care.</p></div></div><div class="mbody"><span class="role r-cyan">Ultrasound Specialist</span><h4>Greg</h4></div></div>
@@ -769,6 +792,50 @@ footer a:hover{color:#fff}
 window.addEventListener('scroll',function(){
   const hero=document.querySelector('.hero-parallax');
   if(hero){hero.style.transform='translateY('+window.scrollY*0.35+'px)';}
+});
+</script>
+
+<!-- Email Modal -->
+<div id="email-modal" class="email-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center">
+  <div class="email-modal-content" style="background:var(--bg-card);border-radius:12px;padding:28px;width:100%;max-width:420px;margin:20px;box-shadow:0 20px 60px rgba(0,0,0,0.2);position:relative">
+    <button onclick="closeEmailModal()" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--muted)">&times;</button>
+    <h3 id="email-modal-title" style="margin:0 0 16px;font-size:1.15rem;color:var(--navy)">Send Message</h3>
+    <form id="email-form" action="" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New message from RMS Healthcare website">
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:4px">Your Name *</label>
+        <input type="text" name="name" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:.9rem;background:var(--bg);color:var(--navy);outline:none" placeholder="John Doe">
+      </div>
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:4px">Your Email *</label>
+        <input type="email" name="email" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:.9rem;background:var(--bg);color:var(--navy);outline:none" placeholder="john@example.com">
+      </div>
+      <div style="margin-bottom:18px">
+        <label style="display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:4px">Message *</label>
+        <textarea name="message" required rows="4" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:.9rem;background:var(--bg);color:var(--navy);outline:none;resize:vertical;font-family:inherit" placeholder="Hi, I'd like to..."></textarea>
+      </div>
+      <button type="submit" style="width:100%;padding:12px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;transition:.2s">Send Message</button>
+    </form>
+  </div>
+</div>
+<script>
+function openEmailModal(name, email) {
+  document.getElementById('email-modal-title').textContent = 'Email ' + name;
+  document.getElementById('email-form').action = 'https://formsubmit.co/' + email;
+  document.getElementById('email-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeEmailModal() {
+  document.getElementById('email-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('email-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeEmailModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeEmailModal();
 });
 </script>
 </body>
