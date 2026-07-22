@@ -489,6 +489,19 @@ footer a:hover{color:#fff}
   border-color:var(--blue)!important;
 }
 </style>
+<style>
+.intake-banner{background:linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 100%);padding:28px 0;border-top:3px solid var(--blue);border-bottom:3px solid var(--blue)}
+.intake-box{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:space-between}
+.intake-icon{font-size:2.8rem;flex-shrink:0}
+.intake-text{flex:1;min-width:280px}
+.intake-text h3{font-size:1.25rem;color:var(--navy);margin-bottom:6px}
+.intake-text p{font-size:.95rem;color:var(--body);margin:0}
+.intake-banner .btn-primary{padding:14px 28px;font-size:1rem;white-space:nowrap}
+@media(max-width:720px){
+  .intake-box{text-align:center;justify-content:center}
+  .intake-text{min-width:100%}
+}
+</style>
 </head>
 <body>
 
@@ -532,6 +545,21 @@ footer a:hover{color:#fff}
       <a class="btn btn-outline-w" href="#contact">&#9993; Book An Appointment</a>
     </div>
   </div>
+
+
+<!-- Patient Intake Banner -->
+<section class="intake-banner">
+  <div class="wrap">
+    <div class="intake-box">
+      <div class="intake-icon">&#128196;</div>
+      <div class="intake-text">
+        <h3>New Patient? Start Your Intake Here</h3>
+        <p>Download, print, and fill out your forms before your first visit to save time at check-in.</p>
+      </div>
+      <a class="btn btn-primary" href="/intake">Go to Patient Forms &rarr;</a>
+    </div>
+  </div>
+</section>
 </section>
 
 <section id="about" class="reveal">
