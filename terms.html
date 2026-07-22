@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions – RMS Healthcare Inc.</title>
+<meta name="description" content="Terms and conditions for using the RMS Healthcare Inc. website. Dr. Ashok Lall, MD — Internal Medicine & Primary Care in Santa Clarita.">
+<link rel="icon" href="images/RMS-fav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E2E4E;
+  --navy-deep:#081D33;
+  --blue:#14588C;
+  --blue-bright:#1E88C7;
+  --body:#5A6B7C;
+  --bg:#FFFFFF;
+  --bg-soft:#F3F7FB;
+  --line:#E3EAF1;
+  --ff:"Inter",-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);color:var(--body);line-height:1.65;background:var(--bg)}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--navy-deep)}
+
+/* Header */
+.sticky-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand img{height:40px;width:auto}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--navy);font-weight:600;font-size:.92rem;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.header-actions{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;font-weight:600;font-size:.88rem;transition:all .2s;cursor:pointer;border:none;font-family:inherit}
+.btn-outline{color:var(--blue);border:1.5px solid var(--line);background:transparent}
+.btn-outline:hover{border-color:var(--blue);background:var(--bg-soft)}
+.call-expert{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:700}
+.call-expert small{display:block;font-size:.7rem;color:var(--body);font-weight:500}
+.call-expert b{font-size:.95rem}
+.mobile-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.active{display:flex}
+  .mobile-toggle{display:block}
+  .header-actions .call-expert span:not(.ic){display:none}
+}
+
+/* Page header */
+.page-hero{background:linear-gradient(120deg,var(--navy-deep) 0%,var(--navy) 55%,#123C63 100%);color:#C9DAE8;padding:70px 0 50px;position:relative;overflow:hidden}
+.page-hero::after{content:"";position:absolute;right:-100px;top:-100px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(30,136,199,.2),transparent 65%);pointer-events:none}
+.page-hero h1{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-bottom:.5rem;position:relative;z-index:1}
+.page-hero p{position:relative;z-index:1;font-size:1.05rem;color:#A8C8E0}
+
+/* Content */
+.terms-content{padding:60px 0 80px}
+.terms-wrap{max-width:800px;margin:0 auto;padding:0 24px}
+.terms-wrap h2{color:var(--navy);font-size:1.35rem;margin:40px 0 14px;font-weight:700}
+.terms-wrap h2:first-of-type{margin-top:0}
+.terms-wrap p{margin-bottom:16px;font-size:.97rem}
+.terms-wrap ul{margin:0 0 18px 22px}
+.terms-wrap ul li{margin-bottom:8px;font-size:.95rem}
+.terms-wrap a{color:var(--blue);font-weight:600}
+.terms-wrap a:hover{text-decoration:underline}
+.terms-wrap strong{color:var(--navy)}
+.divider{height:1px;background:var(--line);margin:36px 0}
+.last-updated{display:inline-block;background:var(--bg-soft);color:var(--blue);font-size:.82rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:30px}
+
+/* Footer */
+footer{background:var(--navy-deep);color:#8BA3B8;padding:50px 0 0;font-size:.9rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-grid h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.footer-grid p{line-height:1.7;margin-bottom:12px}
+.footer-grid ul{list-style:none}
+.footer-grid ul li{margin-bottom:10px}
+.footer-grid a{color:#8BA3B8;transition:color .2s}
+.footer-grid a:hover{color:#fff}
+.footer-logo{height:36px;width:auto;margin-bottom:14px;filter:brightness(0) invert(1)}
+.copyright{text-align:center;padding:22px 0;border-top:1px solid rgba(255,255,255,.08);color:#6A8AA5;font-size:.82rem}
+
+@media(max-width:800px){
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="sticky-header">
+  <div class="wrap nav">
+    <a class="brand" href="/"><img src="images/RMS-logo.png" alt="RMS Healthcare Inc."></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#testimonials">Testimonials</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="/intake"><span>&#128196;</span> Patient Forms</a>
+      <a class="call-expert" href="tel:6612546600">
+        <span class="ic">&#128222;</span>
+        <span><small>Call Expert</small><b>661-254-6600</b></span>
+      </a>
+      <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Terms & Conditions</h1>
+    <p>Please read these terms carefully before using this website.</p>
+  </div>
+</section>
+
+<section class="terms-content">
+  <div class="terms-wrap">
+
+    <span class="last-updated">Last updated: July 2026</span>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing and using the RMS Healthcare Inc. website (<strong>rmshealthcareinc.com</strong>), you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use this website. These terms may be updated at any time without notice, and continued use of the site constitutes acceptance of the revised terms.</p>
+
+    <h2>2. Medical Disclaimer</h2>
+    <p>The content on this website is for <strong>informational purposes only</strong> and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of Dr. Ashok Lall, MD, or another qualified healthcare provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay seeking it because of something you have read on this website.</p>
+    <p>In case of a medical emergency, call <strong>911</strong> or go to the nearest emergency room immediately.</p>
+
+    <h2>3. Intellectual Property</h2>
+    <p>All content on this website — including text, images, graphics, logos, and software — is the property of RMS Healthcare Inc. or its content suppliers and is protected by applicable U.S. and international copyright laws. You may not reproduce, distribute, modify, transmit, display, perform, publish, license, create derivative works from, transfer, or sell any content from this website without prior written permission from RMS Healthcare Inc.</p>
+
+    <h2>4. Use of Site Content</h2>
+    <p>RMS Healthcare Inc. grants you a limited, non-exclusive, non-transferable license to access and view the content on this website for your personal, non-commercial use only. You may not:</p>
+    <ul>
+      <li>Use the site for any unlawful purpose or in any way that could damage, disable, or impair the site</li>
+      <li>Attempt to gain unauthorized access to any portion of the site or its systems</li>
+      <li>Use any automated means to access or scrape the site without permission</li>
+      <li>Interfere with the proper working of the site or any activities conducted on the site</li>
+    </ul>
+
+    <h2>5. Privacy & Data Protection</h2>
+    <p>We respect your privacy. Any personal information collected through this website — such as names, contact details, or health-related inquiries — is used solely to respond to your requests and provide care. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    <p>Our web server may automatically log basic visit information (IP address, browser type, pages accessed) for diagnostic and improvement purposes. This data is anonymized and not linked to personal identity.</p>
+
+    <h2>6. Third-Party Links</h2>
+    <p>This website may contain links to third-party websites (e.g., patient portals, insurance providers, health resources). RMS Healthcare Inc. does not control or endorse the content, privacy practices, or functionality of these external sites. We strongly recommend reviewing the terms and privacy policies of any third-party site you visit.</p>
+
+    <h2>7. Patient Forms & Submissions</h2>
+    <p>Patient intake forms and other documents provided through this website are for administrative purposes only. Submitting a form does not establish a doctor-patient relationship. All submitted information is handled in accordance with HIPAA and applicable privacy laws. If you have questions about your submission, please contact our office directly.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>RMS Healthcare Inc., Dr. Ashok Lall, MD, and all affiliated staff shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of, or inability to use, this website or its content. This includes but is not limited to damages for errors, omissions, interruptions, defects, delays, computer viruses, or loss of data.</p>
+
+    <h2>9. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the website after any changes constitutes acceptance of the revised terms. We encourage you to review this page periodically.</p>
+
+    <h2>10. Governing Law</h2>
+    <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved in the courts located in Los Angeles County, California.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+    <p><strong>RMS Healthcare Inc.</strong><br>
+    23928 Lyons Ave, Newhall, CA 91321<br>
+    Phone: <a href="tel:6612546600">(661) 254-6600</a><br>
+    Email: <a href="mailto:misscerydp@yahoo.com">misscerydp@yahoo.com</a></p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="images/RMS-logo.png" alt="RMS Healthcare" class="footer-logo">
+        <p>Comprehensive internal medicine and preventive care in Santa Clarita Valley. Serving the community with compassion and expertise since 1997.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/intake">Patient Forms</a></li>
+          <li><a href="/terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6612546600">(661) 254-6600</a></li>
+          <li><a href="mailto:misscerydp@yahoo.com">misscerydp@yahoo.com</a></li>
+          <li>23928 Lyons Ave, Newhall, CA 91321</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 RMS Healthcare Inc. All rights reserved. This site is for informational purposes only and not a substitute for medical advice.</div>
+  </div>
+</footer>
+
+</body>
+</html>
