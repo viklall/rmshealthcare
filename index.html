@@ -84,10 +84,11 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 
 /* Hero — navy band, left aligned */
 .hero{background:linear-gradient(120deg,var(--navy-deep) 0%,var(--navy) 55%,#123C63 100%);color:#C9DAE8;padding:90px 0 80px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(30,136,199,.25),transparent 65%)}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(30,136,199,.25),transparent 65%);pointer-events:none;z-index:0}
 .hero .wrap{position:relative;z-index:1}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;max-width:1150px;margin:0 auto;padding:0 24px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;max-width:1150px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
 .hero-left{max-width:44rem}
+.hero-right{position:relative;z-index:2}
 .hero .eyebrow{color:#7FB4D9}
 .hero h1{color:#fff;font-size:clamp(2.5rem,5.4vw,3.8rem);margin-bottom:1rem}
 .hero .sub{font-size:1.22rem;font-weight:600;color:#CFE3F2;margin-bottom:.9rem}
