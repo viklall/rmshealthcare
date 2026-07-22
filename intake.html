@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Intake Forms | RMS Healthcare Inc.</title>
+<meta name="description" content="Download or print patient intake forms for RMS Healthcare Inc. in Newhall, CA.">
+<style>
+:root{
+  --navy:#0E2E4E;
+  --navy-deep:#081D33;
+  --blue:#14588C;
+  --blue-bright:#1E88C7;
+  --body:#5A6B7C;
+  --bg:#FFFFFF;
+  --bg-soft:#F3F7FB;
+  --line:#E3EAF1;
+  --ff:"Inter",-apple-system,"Segoe UI",sans-serif;
+  --card-bg:#FFFFFF;
+  --card-border:#E3EAF1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);color:var(--body);background:var(--bg);line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* Header */
+.intake-header{background:var(--navy);color:#fff;padding:48px 0;text-align:center}
+.intake-header h1{font-size:2rem;font-weight:700;margin-bottom:8px}
+.intake-header p{font-size:1.05rem;opacity:.85}
+
+/* Cards */
+.options{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:48px 0}
+@media(max-width:720px){.options{grid-template-columns:1fr}}
+
+.option-card{background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:14px;padding:36px 32px;text-align:center;transition:.2s}
+.option-card:hover{border-color:var(--blue);box-shadow:0 8px 30px rgba(14,46,78,.08)}
+.option-icon{font-size:3rem;margin-bottom:16px;display:block}
+.option-card h2{font-size:1.25rem;color:var(--navy);margin-bottom:10px}
+.option-card p{font-size:.95rem;margin-bottom:24px;color:var(--body)}
+
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;font-size:.95rem;font-weight:600;text-decoration:none;transition:.2s;cursor:pointer;border:none;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-bright)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff}
+
+/* Instructions */
+.instructions{background:var(--bg-soft);border-radius:14px;padding:32px;margin:24px 0}
+.instructions h3{color:var(--navy);font-size:1.1rem;margin-bottom:16px}
+.instructions ol{padding-left:20px}
+.instructions li{margin-bottom:10px;font-size:.95rem}
+.instructions li strong{color:var(--navy)}
+
+/* Footer */
+.intake-footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);margin-top:24px}
+.intake-footer a{color:var(--blue);text-decoration:none;font-weight:600}
+.intake-footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="intake-header">
+  <div class="wrap">
+    <h1>Patient Intake Forms</h1>
+    <p>Choose how you'd like to complete your paperwork before your first visit</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="options">
+    <div class="option-card">
+      <span class="option-icon">💾</span>
+      <h2>Download & Fill on Your Computer</h2>
+      <p>Download the PDF, fill it out using a PDF reader (like Adobe Acrobat or Preview), then email it back or bring it to your appointment.</p>
+      <a class="btn btn-primary" href="NEW PATIENT PAPERWORK 2026.pdf" download>Download PDF Form</a>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">🖨️</span>
+      <h2>Print & Fill by Hand</h2>
+      <p>Print the form at home, fill it out by hand, and bring it with you to your first appointment. No computer needed.</p>
+      <a class="btn btn-outline" href="NEW PATIENT PAPERWORK 2026.pdf" target="_blank">Open PDF to Print</a>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <h3>📋 What You'll Need to Complete the Form</h3>
+    <ol>
+      <li><strong>Photo ID</strong> — Driver's license or other government-issued identification</li>
+      <li><strong>Insurance card(s)</strong> — Primary and any secondary insurance</li>
+      <li><strong>Current medications list</strong> — Names, doses, and how often you take them</li>
+      <li><strong>Previous doctor information</strong> — Name, address, phone, and fax of your prior physician</li>
+      <li><strong>Emergency contact</strong> — Name, relationship, and phone number</li>
+      <li><strong>Pharmacy information</strong> — Name and location of your preferred pharmacy</li>
+    </ol>
+  </div>
+
+  <div class="instructions">
+    <h3>🏥 Before Your First Visit</h3>
+    <ol>
+      <li><strong>Arrive 15 minutes early</strong> to allow time for check-in and any remaining paperwork</li>
+      <li><strong>Bring your insurance card and photo ID</strong> — we need to make copies for your file</li>
+      <li><strong>Bring your co-payment</strong> — co-pays and existing balances are due prior to seeing the doctor</li>
+      <li><strong>Bring your completed intake form</strong> — whether downloaded, printed, or we'll provide one at the office</li>
+    </ol>
+  </div>
+
+  <div class="instructions" style="background:#fff8e6;border:1.5px solid #ffe0a3;">
+    <h3>⚠️ Cancellation Policy</h3>
+    <p style="margin:0;font-size:.95rem">Due to an increase in "no shows," a <strong>$25.00 fee</strong> will be applied if an appointment is not cancelled within <strong>24 hours</strong>.</p>
+  </div>
+
+</main>
+
+<footer class="intake-footer wrap">
+  <p>Questions? Call us at <a href="tel:6612546600">661-254-6600</a> or <a href="/">return to homepage</a></p>
+</footer>
+
+</body>
+</html>
