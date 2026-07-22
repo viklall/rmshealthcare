@@ -471,6 +471,24 @@ footer a:hover{color:#fff}
   color:var(--navy)
 }
 </style>
+<style>
+.intake-highlight{
+  position:relative;
+  animation:intake-pulse 2s infinite;
+  border-color:var(--blue)!important;
+  color:var(--navy)!important;
+  background:linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 100%)!important;
+}
+@keyframes intake-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(20,88,140,.4)}
+  50%{box-shadow:0 0 0 8px rgba(20,88,140,0)}
+}
+.intake-highlight:hover{
+  background:var(--blue)!important;
+  color:#fff!important;
+  border-color:var(--blue)!important;
+}
+</style>
 </head>
 <body>
 
@@ -488,8 +506,8 @@ footer a:hover{color:#fff}
     </ul>
 
     <div class="header-actions">
-      <a class="btn btn-outline intake-header" href="/intake" target="_blank">
-        <span class="ic">&#128196;</span> Patient Intake
+      <a class="btn btn-outline intake-header intake-highlight" href="/intake">
+        <span class="ic">&#128196;</span> Patient Forms
       </a>
       <a class="call-expert" href="tel:6612546600">
         <span class="ic">&#128222;</span>
