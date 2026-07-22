@@ -85,14 +85,28 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 /* Hero — navy band, left aligned */
 .hero{background:linear-gradient(120deg,var(--navy-deep) 0%,var(--navy) 55%,#123C63 100%);color:#C9DAE8;padding:90px 0 80px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-140px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(30,136,199,.25),transparent 65%)}
-.hero .wrap{position:relative;z-index:1;max-width:900px}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;max-width:1150px;margin:0 auto;padding:0 24px}
+.hero-left{max-width:44rem}
 .hero .eyebrow{color:#7FB4D9}
 .hero h1{color:#fff;font-size:clamp(2.5rem,5.4vw,3.8rem);margin-bottom:1rem}
 .hero .sub{font-size:1.22rem;font-weight:600;color:#CFE3F2;margin-bottom:.9rem}
-.hero p.tag{max-width:44rem;margin-bottom:2.2rem}
+.hero p.tag{margin-bottom:2.2rem}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
 
-/* About — photos left, text right */
+/* Intake card inside hero */
+.intake-card{background:#fff;border-radius:16px;padding:32px 28px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.15)}
+.intake-card-icon{font-size:2.6rem;margin-bottom:12px}
+.intake-card h3{color:var(--navy);font-size:1.15rem;margin-bottom:2px}
+.intake-card-lead{color:var(--blue);font-size:1.05rem;font-weight:700;margin-bottom:10px}
+.intake-card-desc{color:var(--body);font-size:.9rem;line-height:1.5;margin-bottom:18px}
+.intake-card .btn-primary{width:100%;justify-content:center}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero{padding:70px 0 60px}
+  .hero-right{max-width:420px;margin:0 auto;width:100%}
+}/* About — photos left, text right */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .collage{position:relative}
 .collage .top{border-radius:14px;box-shadow:0 16px 36px rgba(14,46,78,.18);margin-bottom:18px;aspect-ratio:16/10;object-fit:cover;width:100%}
@@ -535,28 +549,25 @@ footer a:hover{color:#fff}
 </header>
 
 <section class="hero" id="top"><div class="hero-parallax"></div>
-  <div class="wrap">
-    <p class="eyebrow">&#9679; Dr. Ashok Lall, MD — Internal Medicine Specialist</p>
-    <h1>RMS Healthcare Inc.</h1>
-    <p class="sub">Comprehensive Internal Medicine &amp; Preventive Care in Santa Clarita Valley</p>
-    <p class="tag">From routine checkups to advanced screenings, RMS Healthcare Inc. delivers superior care to keep you healthy, informed, and supported at every stage of life.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-white" href="tel:6612546600">&#128222; Call Now</a>
-      <a class="btn btn-outline-w" href="#contact">&#9993; Book An Appointment</a>
-    </div>
-  </div>
-
-
-<!-- Patient Intake Banner -->
-<section class="intake-banner">
-  <div class="wrap">
-    <div class="intake-box">
-      <div class="intake-icon">&#128196;</div>
-      <div class="intake-text">
-        <h3>New Patient? Start Your Intake Here</h3>
-        <p>Download, print, and fill out your forms before your first visit to save time at check-in.</p>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <p class="eyebrow">&#9679; Dr. Ashok Lall, MD — Internal Medicine Specialist</p>
+      <h1>RMS Healthcare Inc.</h1>
+      <p class="sub">Comprehensive Internal Medicine &amp; Preventive Care in Santa Clarita Valley</p>
+      <p class="tag">From routine checkups to advanced screenings, RMS Healthcare Inc. delivers superior care to keep you healthy, informed, and supported at every stage of life.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-white" href="tel:6612546600">&#128222; Call Now</a>
+        <a class="btn btn-outline-w" href="#contact">&#9993; Book An Appointment</a>
       </div>
-      <a class="btn btn-primary" href="/intake">Go to Patient Forms &rarr;</a>
+    </div>
+    <div class="hero-right">
+      <div class="intake-card">
+        <div class="intake-card-icon">&#128196;</div>
+        <h3>New Patient?</h3>
+        <p class="intake-card-lead">Start Your Intake Here</p>
+        <p class="intake-card-desc">Download, print, and fill out your forms before your first visit to save time at check-in.</p>
+        <a class="btn btn-primary" href="/intake">Go to Patient Forms &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
